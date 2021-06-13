@@ -20,13 +20,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setupButtons()
+        viewModel.state.observeForever {
+            binding.result.text = it.toString()
+        }
     }
 
     private fun setupButtons() {
 
-        binding.multiply.setOnClickListener {
+        binding.plus.setOnClickListener {
             if (validInput()) {
-                viewModel.onMultiplyClicked(inputA, inputB)
+                viewModel.onPlusClicked(inputA, inputB)
                 binding.sign.text = "+"
             }
         }
@@ -41,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         binding.multiply.setOnClickListener {
         }
 
-        binding.multiply.setOnClickListener {
+        binding.divider.setOnClickListener {
         }
     }
 
