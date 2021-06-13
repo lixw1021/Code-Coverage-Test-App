@@ -32,4 +32,10 @@ class CalculatorViewModelTest {
         testViewModel.onPlusClicked(9, 2)
         assertEquals(11, testViewModel.state.value)
     }
+
+    @Test
+    fun test_on_minus_click_method() {
+        testViewModel.onMinusClicked(9, 2)
+        assertEquals(7, testViewModel.state.value)
+    }
 }
