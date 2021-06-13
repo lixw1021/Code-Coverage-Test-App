@@ -15,13 +15,12 @@ class CalculatorViewModel : ViewModel() {
         state.value = inputA - inputB
     }
 
-    fun onInputAUpdate(toString: String) {
-
+    fun onMultiplyClicked(inputA: Int, inputB: Int) {
+        state.value = inputA * inputB
     }
 
-    fun onInputBUpdate(toString: String) {
-
-
+    fun onDividerClicked(inputA: Int, inputB: Int) {
+        state.value = inputA / inputB
     }
 
 }

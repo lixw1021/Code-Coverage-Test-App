@@ -42,9 +42,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.multiply.setOnClickListener {
+            if (validInput()) {
+                viewModel.onMultiplyClicked(inputA, inputB)
+                binding.sign.text = "*"
+            }
         }
 
         binding.divider.setOnClickListener {
+            if (validInput()) {
+                viewModel.onDividerClicked(inputA, inputB)
+                binding.sign.text = "/"
+            }
         }
     }
 
