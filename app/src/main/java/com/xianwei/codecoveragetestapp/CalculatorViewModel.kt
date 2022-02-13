@@ -21,7 +21,5 @@ class CalculatorViewModel : ViewModel() {
 
     fun onInputBUpdate(toString: String) {
 
-
     }
-
 }
